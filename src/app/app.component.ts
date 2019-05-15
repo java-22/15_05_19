@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Java22150519';
+  title: string = 'Vasya';
+  isInput = true;
+  isShow = true;
+  btnText = 'Hide';
+  names = ['Vasya','Petya','Sofa'];
+
+  changeTitle(){
+    this.title = 'New title';
+    this.isInput = !this.isInput;
+  }
+
+  setTitle(event){
+    this.title = event.target.value;
+  }
+
+  changeVisibility(){
+    this.isShow = !this.isShow;
+    this.btnText = this.isShow ? 'Hide' : 'Show';
+  }
 }
